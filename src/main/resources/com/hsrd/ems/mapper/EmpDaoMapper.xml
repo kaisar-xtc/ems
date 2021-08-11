@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hsrd.ems.dao.EmpDao">
+    <select id="findAll" resultType="com.hsrd.ems.entity.Emp">
+        select * from t_em
+    </select>
+    <insert id="save" parameterType="Emp">
+        insert into t_em values(#{id},#{name},#{salary},#{age})
+    </insert>
+
+    <delete id="delete" parameterType="Emp">
+        delete from t_em where name=#{name}
+    </delete>
+
+    <select id="findByName" parameterType="String" resultType="Emp">
+        select * from t_em where name=#{name}
+    </select>
+
+    <update id="update" parameterType="Emp" >
+        update t_em set name=#{name},salary=#{salary},age=#{age} where name=#{name}
+    </update>
+</mapper>

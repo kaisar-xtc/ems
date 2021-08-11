@@ -1,0 +1,22 @@
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  application:
+    name: ems
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ems?useSSL=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+server:
+  servlet:
+    context-path: /ems
+    jsp:
+      init-parameters:
+        development: true
+
+mybatis:
+  mapper-locations: classpath:com/hsrd/ems/mapper/*.xml
+  type-aliases-package: com.hsrd.ems.entity
