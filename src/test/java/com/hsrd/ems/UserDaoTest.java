@@ -18,6 +18,6 @@ public class UserDaoTest{
     private UserDao userDao;
     @Test
     public void test() {
-
+        System.out.println("master merge test");
     }
 }
