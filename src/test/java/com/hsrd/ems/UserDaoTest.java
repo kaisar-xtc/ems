@@ -19,5 +19,6 @@ public class UserDaoTest{
     @Test
     public void test() {
         System.out.println("master merge test");
+        System.out.println("hot-fix test");
     }
 }
