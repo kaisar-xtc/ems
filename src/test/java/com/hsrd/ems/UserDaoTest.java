@@ -18,6 +18,6 @@ public class UserDaoTest{
     private UserDao userDao;
     @Test
     public void test() {
-        userDao.save(new User(UUID.randomUUID().toString(),"xiaoxu","徐天才","1234","男"));
+
     }
 }
